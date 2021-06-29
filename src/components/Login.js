@@ -1,6 +1,8 @@
 // src/components/Login.js
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import AccountBalance from './AccountBalance';
 
 class LogIn extends Component {
   constructor () {
