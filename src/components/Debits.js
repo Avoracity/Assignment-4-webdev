@@ -39,6 +39,11 @@ class Debits extends Component {
             amount: this.state.amount,
             date
           }
+        
+        newDebit.unshift({description: this.state.description, amount: this.state.amount, date});
+        this.props.sum(this.state.amount, "debits");
+        this.props.addDebit(newDebitInfo);
+        this.setState({credits: newDebit});
     }
     
     
