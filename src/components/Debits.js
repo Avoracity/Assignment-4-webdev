@@ -12,3 +12,9 @@ class Debits extends Component {
         debits: []
       }
     }
+
+
+
+
+
+}
