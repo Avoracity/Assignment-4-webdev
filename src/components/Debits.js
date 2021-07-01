@@ -28,4 +28,12 @@ class Debits extends Component {
     })
     }
 
+    addDebit = (e) => {
+        e.preventDefault();
+        const newDebit = this.state.debits;
+        const date = new Date().toLocaleDateString("en-US");
+        this.setState({date});
+    }
+        
+
 }
