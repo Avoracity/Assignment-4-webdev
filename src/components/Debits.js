@@ -13,7 +13,13 @@ class Debits extends Component {
       }
     }
 
-
+    handleDescription = (e) => {
+        this.setState({ description: e.target.value });
+      }
+    
+    handleAmount = (e) => {
+        this.setState({ amount: e.target.value });
+      }
 
 
 
