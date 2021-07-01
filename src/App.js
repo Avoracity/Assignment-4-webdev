@@ -26,7 +26,7 @@ class App extends Component {
       credits: [],
     }
   }
-  
+
   async componentDidMount() {
     let credits = await axios.get("https://moj-api.herokuapp.com/credits");
     credits = credits.data;
@@ -55,6 +55,14 @@ class App extends Component {
         <UserProfile userName={this.state.currentUser.userName} memberSince={this.state.currentUser.memberSince}  />
     );
 
+    const UserProfileComponent = () => (
+      <UserProfile
+        userName={this.state.currentUser.userName}
+        memberSince={this.state.currentUser.memberSince}
+        accountBalance={this.state.accountBalance}
+      />
+    );
+    
     const LogInComponent = () => (<LogIn user={this.state.currentUser} mockLogIn={this.mockLogIn} />)
 
 
