@@ -26,6 +26,20 @@ class App extends Component {
       credits: [],
     }
   }
+  
+  async componentDidMount() {
+    let credits = await axios.get("https://moj-api.herokuapp.com/credits");
+    credits = credits.data;
+    credits.forEach((credit) => {
+      this.sum(credit.amount, "credits");
+    });
+    let debits = await axios.get("https://moj-api.herokuapp.com/debits");
+    debits = debits.data;
+    debits.forEach((debit) => {
+      this.sum(debit.amount, "debits");
+    });
+    this.setState({ debits, credits, accountBalance: this.state.debitSum - this.state.creditSum });
+  }
 
   mockLogIn = (logInInfo) => {
     const newUser = {...this.state.currentUser}
