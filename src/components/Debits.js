@@ -21,6 +21,11 @@ class Debits extends Component {
         this.setState({ amount: e.target.value });
       }
 
-
+    componentDidMount() {
+    axios.get('https://moj-api.herokuapp.com/debits').then(res => {
+        console.log(res);
+        this.setState({ debits: res.data });
+    })
+    }
 
 }
