@@ -33,7 +33,15 @@ class Debits extends Component {
         const newDebit = this.state.debits;
         const date = new Date().toLocaleDateString("en-US");
         this.setState({date});
-    }
         
+        let newDebitInfo = {
+            description: this.state.description,
+            amount: this.state.amount,
+            date
+          }
+    }
+    
+    
+
 
 }
