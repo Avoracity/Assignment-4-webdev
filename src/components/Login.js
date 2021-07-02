@@ -50,10 +50,10 @@ class LogIn extends Component {
           <button>Log In</button>
         </form>
 
-        <Link to="/userProfile">User Profile</Link>
-        <Link to="/Debits">Debits</Link>
-        <Link to="/Credits">Credits</Link>
-        <Link to="/">Return to Home</Link>
+        <Link to="/userProfile">User Profile </Link>
+        <Link to="/Debits">Debits </Link>
+        <Link to="/Credits">Credits </Link>
+        <Link to="/">Home </Link>
 
         <AccountBalance accountBalance={this.props.accountBalance}/>
 
