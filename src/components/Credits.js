@@ -67,10 +67,10 @@ class Credits extends Component {
             </form>
     
             <AccountBalance accountBalance={this.props.accountBalance} />
-            <Link to="/login">Login</Link>
-            <Link to="/">Return to home</Link>
-            <Link to="/userprofile">User Profile</Link>
-            <Link to="/debits">Debits</Link>
+            <Link to="/login">Login </Link>
+            <Link to="/">Home </Link>
+            <Link to="/userprofile">User Profile </Link>
+            <Link to="/debits">Debits </Link>
           </div>
         );
       }
