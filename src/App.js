@@ -47,6 +47,27 @@ class App extends Component {
     this.setState({currentUser: newUser})
   }
 
+  sum = (sum, creditOrDebit) => {
+    if (creditOrDebit === "credits") {
+      this.setState({ creditSum: this.state.creditSum + parseInt(sum) }, () => this.setState({ accountBalance: this.state.creditSum - this.state.debitSum }));
+    }
+    if (creditOrDebit === "debits") {
+      this.setState({ debitSum: this.state.debitSum + parseInt(sum) }, () => this.setState({ accountBalance: this.state.creditSum - this.state.debitSum }))
+    }
+  }
+
+  updateCredit = (newCred) => {
+    let newCredit = this.state.credits
+    newCredit.push(newCred)
+    this.setState({ credits: newCredit })
+  }
+
+  updateDebit = (newDeb) => {
+    let newDebit = this.state.debits
+    newDebit.push(newDeb)
+    this.setState({ debits: newDebit })
+  }
+  
 
   render() {
 
