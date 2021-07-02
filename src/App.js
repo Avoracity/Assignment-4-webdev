@@ -38,7 +38,7 @@ class App extends Component {
     debits.forEach((debit) => {
       this.sum(debit.amount, "debits");
     });
-    this.setState({ debits, credits, accountBalance: this.state.debitSum - this.state.creditSum });
+    this.setState({ debits, credits, accountBalance: this.state.debitTotal - this.state.creditTotal });
   }
 
   mockLogIn = (logInInfo) => {
