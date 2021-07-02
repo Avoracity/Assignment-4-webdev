@@ -66,8 +66,8 @@ class App extends Component {
         addDebit={this.updateDebit}
         debits={this.state.debits}
         sum={this.sum}
-        creditSum={this.state.creditSum}
-        debitSum={this.state.debitSum}
+        creditTotal={this.state.creditTotal}
+        debitTotal={this.state.debitTotal}
         accountBalance={this.state.accountBalance}
       />
     );
@@ -77,8 +77,8 @@ class App extends Component {
         addCredit={this.updateCredit}
         credits={this.state.credits}
         sum={this.sum}
-        creditSum={this.state.creditSum}
-        debitSum={this.state.debitSum}
+        creditTotal={this.state.creditTotal}
+        debitTotal={this.state.debitTotal}
         accountBalance={this.state.accountBalance}
       />);
 
